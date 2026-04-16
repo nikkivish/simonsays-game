@@ -69,7 +69,7 @@ function checkAns(idx) {
 
     let name = document.getElementById("username").value || "Anonymous";
     console.log("Sending:", { score: level, name: name });
-    fetch("http://localhost:3000/save-score", {
+    fetch("https://simonsays-backend-6367.onrender.com/save-score", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -111,7 +111,7 @@ function reset() {
   level = 0;
 }
 async function getScores() {
-  let res = await fetch("http://localhost:3000/scores");
+  let res = await fetch("https://simonsays-backend-6367.onrender.com/scores");
   let data = await res.json();
 
   let list = document.getElementById("leaderboard");
