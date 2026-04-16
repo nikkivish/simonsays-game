@@ -1,0 +1,160 @@
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+.btn {
+  height: 180px;
+  width: 180px;
+  border: 10px solid black;
+  border-radius: 20%;
+  margin: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+}
+.yellow {
+  background-color: yellow;
+}
+.purple {
+  background-color: purple;
+}
+.red {
+  background-color: #ff0023;
+}
+.green {
+  background-color: green;
+}
+.flash {
+  background-color: white;
+  box-shadow:
+    0 0 30px white,
+    0 0 60px white;
+  transform: scale(1.1);
+}
+.userflash {
+  background-color: black;
+  box-shadow:
+    0 0 30px black,
+    0 0 60px black;
+  transform: scale(1.1);
+}
+.level-animate {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 25px 30px;
+  width: 320px;
+  text-align: left;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#popup h3 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+#popup ul {
+  list-style-type: square;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#popup li {
+  margin: 0.4rem 0;
+}
+
+/* OK button styling */
+#closeBtn {
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#leaderboard {
+  list-style: none;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderboard-area {
+  min-width: 200px;
+}
+
+#leaderboard {
+  list-style: none;
+  padding: 0;
+}
+
+#leaderboard li {
+  background: white;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+#username {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+#leaderboard li:first-child {
+  background: gold;
+}

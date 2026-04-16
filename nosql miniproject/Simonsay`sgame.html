@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simonsays Game</title>
+    <link rel="stylesheet" href="Simonsaygame.css" />
+  </head>
+  <body>
+    <h1>Simon says Game</h1>
+
+    <h2>Press any key to start the game</h2>
+    <div id="popup">
+      <h3>Game Rules:</h3>
+      <ul>
+        <li>Watch the flashing colors.</li>
+        <li>Repeat the same sequence.</li>
+        <li>Each level adds one more color.</li>
+        <li>One mistake ends the game!</li>
+      </ul>
+      <button id="closeBtn">OK</button>
+    </div>
+    <div class="main-container">
+      <div class="game-area">
+        <div class="btncontainer">
+          <div class="line1">
+            <div class="btn red" type="button" id="red">1</div>
+            <div class="btn yellow" type="button" id="yellow">2</div>
+          </div>
+          <div class="line2">
+            <div class="btn green" type="button" id="green">3</div>
+            <div class="btn purple" type="button" id="purple">4</div>
+          </div>
+        </div>
+      </div>
+      <div class="leaderboard-area">
+        <h2>🏆 Leaderboard</h2>
+        <input type="text" id="username" placeholder="Enter your name" />
+        <ul id="leaderboard"></ul>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="simonsaysgame2.js"></script> -->
+  <script src="Simonsaygame.js"></script>
+</html>
